@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaltexChallenge.WebApi", "CaltexChallenge.WebApi\CaltexChallenge.WebApi.csproj", "{C136A77B-F83E-4F81-BA2C-D6CF3B1943D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaltexChallenge.Data", "CaltexChallenge.Data\CaltexChallenge.Data.csproj", "{4B81261E-9172-483D-97FA-D745F037CAFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaltexChallenge.Services", "CaltexChallenge.Services\CaltexChallenge.Services.csproj", "{85549CED-FC17-4049-AD84-385F16A9E36A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaltexChallenge.WebApi.Tests", "CaltexChallenge.WebApi.Tests\CaltexChallenge.WebApi.Tests.csproj", "{B263B800-254B-46C6-9641-3D05BB7DD1AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C136A77B-F83E-4F81-BA2C-D6CF3B1943D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C136A77B-F83E-4F81-BA2C-D6CF3B1943D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C136A77B-F83E-4F81-BA2C-D6CF3B1943D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C136A77B-F83E-4F81-BA2C-D6CF3B1943D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B81261E-9172-483D-97FA-D745F037CAFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B81261E-9172-483D-97FA-D745F037CAFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B81261E-9172-483D-97FA-D745F037CAFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B81261E-9172-483D-97FA-D745F037CAFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85549CED-FC17-4049-AD84-385F16A9E36A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85549CED-FC17-4049-AD84-385F16A9E36A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85549CED-FC17-4049-AD84-385F16A9E36A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85549CED-FC17-4049-AD84-385F16A9E36A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B263B800-254B-46C6-9641-3D05BB7DD1AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B263B800-254B-46C6-9641-3D05BB7DD1AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B263B800-254B-46C6-9641-3D05BB7DD1AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B263B800-254B-46C6-9641-3D05BB7DD1AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F156DCC-BAB9-489E-86D4-81C4859D936A}
+	EndGlobalSection
+EndGlobal
