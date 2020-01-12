@@ -95,6 +95,38 @@ namespace CaltexChallenge.WebApi.Tests
             Assert.AreEqual(0, purchase.DiscountApplied);
             Assert.AreEqual(purchase.TotalAmount, purchase.GrandTotal);
         }
+        [TestMethod]
+        public async Task TestPurchaseWithPointsAndDiscountPromotionsApplied()
+        {
+            var request = new PurchaseRequest
+            {
+                CustomerId = "8e4e8991-aaee-495b-9f24-52d5d0e509c5",
+                LoyaltyCard = "CTX0000001",
+                TransactionDate = DateTime.Parse("5 Jan 2020"),
+                Basket = new[]
+                    {
+                        new BasketItem { ProductId = "PRD01", Quantity = 1, UnitPrice = 1.2m },
+                        new BasketItem { ProductId = "PRD02", Quantity = 5, UnitPrice = 1.3m },
+                        new BasketItem { ProductId = "PRD05", Quantity = 3, UnitPrice = 5.1m },
+                        new BasketItem { ProductId = "PRD06", Quantity = 2, UnitPrice = 3.4m },
+                    }.ToList()
+            };
+
+            var response = await Client.PostAsJsonAsync("/Purchases/", request);
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            var purchase = await response.Content.ReadAsAsync<Purchase>();
+            Assert.IsNotNull(purchase);
+
+            //New Year Promo points promotion with 2 points for every dollar spent on any product categories
+            var expectedPointsEarned = (int)request.Basket.Sum(bi => bi.Quantity * bi.UnitPrice) * 2;
+
+            // PRD01 and PRD02 will be discounted by 20% due to the Fuel Discount Promo discount between 1 Jan - 15 Feb
+            var expectedDiscountApplied = request.Basket.GetRange(0, 2).Sum(bi => bi.Quantity * bi.UnitPrice) * 20/100m;
+            Assert.AreEqual(request.Basket.Sum(bi => bi.Quantity * bi.UnitPrice), purchase.TotalAmount);
+            Assert.AreEqual(expectedPointsEarned, purchase.PointsEarned);
+            Assert.AreEqual(expectedDiscountApplied, purchase.DiscountApplied);
+            Assert.AreEqual(purchase.TotalAmount - expectedDiscountApplied, purchase.GrandTotal);
+        }
 
     }
 }

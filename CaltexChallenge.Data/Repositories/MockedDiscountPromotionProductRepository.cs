@@ -11,8 +11,8 @@ namespace CaltexChallenge.Data.Repositories
         // Obviously, the entities need to come from a proper datastore, e.g. database.
         private static readonly IList<DiscountPromotionProduct> DiscountPromotionProducts = new[]
         {
-            new DiscountPromotionProduct { DiscountPromotionId = "DP001", ProductId = "PRD02"},
-            new DiscountPromotionProduct { DiscountPromotionId = "DP001", ProductId = "PRD01"}
+            new DiscountPromotionProduct { DiscountPromotionId = "DP001", ProductId = "PRD01"},
+            new DiscountPromotionProduct { DiscountPromotionId = "DP001", ProductId = "PRD02"}
         }.ToList();
 
         // I declared all methods in the repositories "async" even though the actual implementation is synchronous. 
