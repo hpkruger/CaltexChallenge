@@ -1,6 +1,6 @@
 # Caltex Challenge
 
-Caltex Technical Test Challenge. I left comments throughout the source code.
+Caltex Technical Test Challenge. I left comments throughout the source code, please have a read
 
 ## Issues
 
